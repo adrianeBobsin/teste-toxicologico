@@ -56,7 +56,7 @@ class SampleController {
       }
       res.status(200).json(responseJson)
     } catch (err) {
-      res.status(400).json({ message: 'Errror, try again later', err })
+      res.status(400).json({ message: 'Error, try again later', err })
     }
   }
 
@@ -64,11 +64,11 @@ class SampleController {
     await sample
       .find()
       .then(sample => {
-        if (!sample) res.status(404).json({ mensagem: 'Amostra não encontrada' })
+        if (!sample) res.status(404).json({ mensagem: 'Error, sample dont finded.' })
         res.status(200).json(sample)
       })
       .catch(err => {
-        res.status(400).json({ mensagem: 'Erro ao buscar amostra', err })
+        res.status(400).json({ mensagem: 'Error trying to find the sample', err })
       })
   }
 }

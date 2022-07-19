@@ -86,7 +86,7 @@ const connectDatabase = async () => {
 
 const configMain = async () => {
   await connectDatabase()
-  //await generateCredentials()
+  await generateCredentials()
   await generatePassingScore()
 }
 

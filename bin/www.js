@@ -5,7 +5,7 @@
  */
 
 const app = require('../app')
-const debug = require('debug')('synvia:server')
+const debug = require('debug')('teste-toxicologico:server')
 const http = require('http')
 const mongoose = require('mongoose')
 const { config } = require('../utils/config')
