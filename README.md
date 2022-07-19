@@ -15,6 +15,9 @@ Link do projeto no Heroku: https://teste-toxicologico.herokuapp.com/
 
 ## ⚙️ Utilizando a aplicação
 
+Para acessar a coleção do postman importe [este link](https://www.getpostman.com/collections/931b8769e32fdd3a1f65)
+na ferramenta.
+
 Necessário primeiramente gerar o token:
 
 **/token**
