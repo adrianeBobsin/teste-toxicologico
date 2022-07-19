@@ -5,14 +5,10 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const passport = require('passport')
 
-const indexRouter = require('./routes/index')
 const samplesRouter = require('./routes/samples')
 const tokenRouter = require('./routes/tokens')
 
 const app = express()
-
-// view engine setup
-//app.set('views', path.join(__dirname, 'views'))
 
 app.use(logger('dev'))
 app.use(express.json())

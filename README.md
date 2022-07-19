@@ -11,8 +11,6 @@ Link do projeto no Heroku: https://teste-toxicologico.herokuapp.com/
 
 ## ⚙️ Utilizando os endpoints
 
-[/]
-
 
 ## 🛠️ Construído com
 
