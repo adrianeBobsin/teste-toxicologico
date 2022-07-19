@@ -11,7 +11,7 @@ class TokenController {
       client_secret
     })
 
-    if (credentials || (req.body.client_id == 'synvia' && req.body.client_secret == 'teste')) {
+    if (credentials || (req.body.client_id == 'Synvia' && req.body.client_secret == 'teste')) {
       const expiresIn = 60 * 60
       const payloadJwt = {
         client_id,
