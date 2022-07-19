@@ -1,6 +1,8 @@
 const sample = require('../models/samples')
 const sampleScore = require('../models/sampleScore')
 const sampleVerify = require('../utils/sample')
+const { config } = require('../utils/config')
+const jwt = require('jsonwebtoken')
 
 class SampleController {
   async sampleTest(req, res) {
@@ -22,6 +24,11 @@ class SampleController {
       } = req.body
       delete req.body.codigo_amostra
       const samples = req.body
+
+      const token = req.headers.authorization.split(' ')[1]
+      if (!jwt.verify(token, config.secretKey)) {
+        res.status(404).json({ message: 'Token invalid.', e })
+      }
 
       let [{ substances }] = await sampleScore.find()
       const resultSampleVerify = sampleVerify(samples, substances)
@@ -64,6 +71,10 @@ class SampleController {
     await sample
       .find()
       .then(sample => {
+        const token = req.headers.authorization.split(' ')[1]
+        if (!jwt.verify(token, config.secretKey)) {
+          res.status(404).json({ message: 'Token invalid.', e })
+        }
         if (!sample) res.status(404).json({ mensagem: 'Error, sample dont finded.' })
         res.status(200).json(sample)
       })

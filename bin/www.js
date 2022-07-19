@@ -24,7 +24,7 @@ mongoose.connect(dbURI, {
 
 const connection = mongoose.connection
 
-connection.once('open', () => console.log('database is up'))
+connection.once('open', () => console.log('database is ready.'))
 setTimeout(() => {
   const state = connection.readyState
   console.log('state database:', state)

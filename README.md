@@ -17,7 +17,7 @@ Link do projeto no Heroku: https://teste-toxicologico.herokuapp.com/
 
 Necessário primeiramente gerar o token:
 
-- /token
+**/token**
 
 ```json
 {
@@ -28,30 +28,29 @@ Necessário primeiramente gerar o token:
 
 Para realizar o teste de uma amostra:
 
-/sample/sampleTest
+**/sample/sampleTest**
 
 ```json
 {
   "codigo_amostra": "01",
 	"Cocaína": 0.678,
-	"Anfetamina": 1.1,
-	"Metanfetamina": 1.1,
-	"MDA": 1.1,
-	"MDMA": 1,
-	"THC": 1,
-	"Morfina": 1.1,
-	"Codeína": 1.1,
-	"Heroína": 1.1,
-	"Benzoilecgonina": 1,
-	"Cocaetileno": 1,
-	"Norcocaína": 1
+	"Anfetamina": 0.1,
+	"Metanfetamina": 0.1,
+	"MDA": 0.1,
+	"MDMA": 0,
+	"THC": 0.1,
+	"Morfina": 0.1,
+	"Codeína": 0.1,
+	"Heroína": 0.1,
+	"Benzoilecgonina": 0,
+	"Cocaetileno": 0,
+	"Norcocaína": 0
 }
 ```
 
 Para listar as amostras já cadastradas:
 
-/sample/list
-
+**/sample/listAll**
 
 
 ## 🛠️ Construído com
