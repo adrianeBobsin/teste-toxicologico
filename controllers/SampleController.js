@@ -3,7 +3,7 @@ const sampleScore = require('../models/sampleScore')
 const sampleVerify = require('../utils/sample')
 
 class SampleController {
-  async validateSample(req, res) {
+  async sampleTest(req, res) {
     try {
       const {
         codigo_amostra,

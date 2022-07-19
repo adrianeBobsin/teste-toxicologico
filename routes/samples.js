@@ -5,9 +5,9 @@ const passport = require('passport')
 const router = express.Router()
 
 router.post(
-  '/validateSample',
+  '/sampleTest',
   passport.authenticate('jwt', { session: false }),
-  sampleController.validateSample
+  sampleController.sampleTest
 )
 router.get('/list', passport.authenticate('jwt', { session: false }), sampleController.listSamples)
 

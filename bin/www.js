@@ -9,7 +9,7 @@ const debug = require('debug')('teste-toxicologico:server')
 const http = require('http')
 const mongoose = require('mongoose')
 const { config } = require('../utils/config')
-
+const { configMain } = require('../scripts/generateData')
 /**
  * Connect to mongodb & listen for requests
  */
